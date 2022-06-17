@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Josefin+Sans:ital,wght@0,400;1,300&family=Lobster&family=Macondo&family=Roboto:wght@300&display=swap');
+:root{
+
+    /* Font Families */
+    --heading-font: 'Macondo', cursive;
+    --text-font: 'Roboto', sans-serif;
+    --logo-font: 'Macondo', cursive;
+
+
+    /* Colors */
+    --white-color:#fff;
+    /* Background Colors */
+    --navbar-background:#40DFEF; /*2FDD92, 40DFEF*/
+
+
+    /* font Size */
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-family: var(--text-font);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--text-font);
+}
+
+/* Moives */
+div.all-movies{
+    padding: 5% 15%;
+}
+div.all-movies a.createmovie{
+    display: block;
+    width: 130px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #212121df;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+div.movies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+div.movies .movie{
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+    background-color: #212121;
+}
+div.poster{
+    position: relative;
+    overflow: hidden;
+}
+
+div.poster div.actions{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+div.poster:hover div.actions{
+    top: 0;
+}
+div.actions div.action-buttons a{
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1em;
+    font-size: 12px;
+    font-weight: 500;
+    background: #155e63;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+}
+div.actions div.action-buttons a:hover{
+    background-color: #155e63da;
+}
+div.poster div.img{
+    width: 350px;
+    overflow: hidden;
+    height: 250px;
+}
+div.poster img{
+    transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    width: 100%;
+    height: 100%;
+}
+div.poster img:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+div.branding-movie{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+div.branding-movie div.poster div.img{
+    width: 100%;
+    height: 400px;
+}
+div.movies .movie div.body{
+    padding: 5%;
+    color: #fff;
+}
+div.movies .movie div.body h1{
+    font-size: 130%;
+    margin-bottom: 20px;
+}
+div.movies .movie div.body p{
+    font-size: 90%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    padding: 5px 0;
+    line-height: 1.8;
+    word-spacing: 2px;
+}
+div.movies .movie div.body p strong{
+    margin-right: 10px;
+}
+div.movies .movie div.body p.mpaa-rating em{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 90%;
+    box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+}
+
+/* Create Movie */
+div.create-movie{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    font-family: var(--text-font);
+    min-height: 100vh;
+    width:100%;
+}
+div.aside{
+    width:100%;
+    height: 100%;
+    background-color: #212121;
+    /* background-image: url('https://images.all-free-download.com/images/graphicwebp/cinema_background_filmstrip_reel_popcorn_icon_flat_design_6828719.webp'); */
+}
+div.create-movie div.create-movie-contents{
+    background-color: rgba(0,0,0,.1);
+    padding: 10% 0;
+    border: 1px solid rgba(0,0,0,.2);
+    position: relative;
+}
+.back{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    display: block;
+    /* width: 60px; */
+    text-align: center;
+    padding: 5px 10px;
+    /* background-color: #212121df; */
+    border-bottom: 1px solid #212121df;
+    text-decoration: none;
+    color: #212121df;
+    /* border-radius: 3px; */
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back img{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.back span{
+    font-size: 14px;
+}
+.back:hover img{
+  transform: translateX(-5px);
+}
+.back:hover{
+    color: #212121c5;
+}
+div.create-movie div.create-movie-contents h1{
+    color: #333;
+    margin: 0 auto;
+    font-size: 200%;
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+div.create-movie div.create-movie-contents h1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:90%;
+    height: 5px;
+    background-color: #333;
+}
+div.create-movie-contents form{
+    width: 50%;
+    margin: auto;
+}
+div.create-movie-contents form div.form-group{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+div.form-group label{
+    font-size: 100%;
+    font-weight: 600;
+}
+div#nowshowing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+.nowshowing{
+    margin-right: 10px;
+}
+div.form-group input, div.form-group select{
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.5);
+    font-weight: 700;
+    color: rgba(51, 51, 51, 0.725);
+}
+div.form-group input:focus, div.form-group select:focus{
+    border: 3px solid #4D77FF;
+    outline: none;
+}
+div.create-movie-contents form button{
+    display: block;
+    border: none;
+    padding: 15px 20px;
+    background-color: #4D77FF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.5);
+    border-radius: 3px;
+    width: 100%;
+}

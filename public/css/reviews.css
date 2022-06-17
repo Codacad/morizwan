@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Josefin+Sans:ital,wght@0,400;1,300&family=Lobster&family=Macondo&family=Roboto:wght@300&display=swap');
+:root{
+
+    /* Font Families */
+    --heading-font: 'Macondo', cursive;
+    --text-font: 'Roboto', sans-serif;
+    --logo-font: 'Macondo', cursive;
+
+
+    /* Colors */
+    --white-color:#fff;
+    /* Background Colors */
+    --navbar-background:#40DFEF; /*2FDD92, 40DFEF*/
+
+
+    /* font Size */
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-family: var(--text-font);
+}
+div.movie-reviews{
+    padding: 5% 25%;
+    background-color: rgba(0,0,0,.05);
+}
+div.movie{
+    background-color: #fff;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.5);
+}
+/* Movie Details */
+div.movie div.movie-details{
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    grid-gap: 30px;
+    align-items: center;
+    /* border-bottom: 1px solid rgba(0,0,0,.2); */
+}
+div.movie-details div.poster{
+    width: 100%;
+    height: 300px
+}
+div.img{
+    width: 100%;
+    height: 100%;
+}
+div.movie-details div.poster img{
+    width: 100%;
+    height: 100%;
+}
+div.movie-details div.details div.contents h1{
+    font-size: 120%;
+    margin-bottom: 20px;
+}
+div.movie-details div.details div.contents p{
+    display: grid;
+    padding: 5px 0;
+    grid-template-columns: 1fr 2fr;
+    line-height: 1.8;
+}
+div.movie-details div.details div.contents p strong{
+    margin-right: 20px;
+}
+div.movie-details div.details div.contents p.mpaa-rating em{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 90%;
+    box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+}
+
+/* Reviews Section */
+div.reviews-section{
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    grid-gap: 30px;
+}
+
+div.blank-side{
+    background-color:#212121;
+}
+div.contents-side .reviews{
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.reviews h3{
+    color: rgba(0,0,0,.5);
+    background-color: rgba(221, 221, 221, 0.437);
+    padding: 10% 0;
+    text-align: center;
+    box-shadow: inset 0px 0px  20px rgba(49, 49, 49, 0.366);
+}
+.reviews .review{
+    margin: 20px 0;
+}
+.review .content p{
+    line-height: 1.8;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0,0,0,.8);
+}
+.review .review-rating img.star{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    fill: yellow;
+}
+.review .review-rating .rating-number{
+    visibility: hidden;
+}
+div.reviews-section .review-form{
+    padding: 5% 0;
+    padding-right: 30px;
+}
+
+textarea, div.custom-selector, button.create-review{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+textarea{
+    outline: none;
+    border: 1px solid rgba(0,0,0,.5);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: rgba(51, 51, 51, 0.632);
+}
+textarea:focus{
+    box-shadow: 0px 0px 3px #155e63, 0px 0px 3px #155e63, 0px 0px 3px #155e63,
+                0px 0px 3px #155e63, 0px 0px 3px #155e63, 0px 0px 3px #155e63;
+}
+select{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 0.632);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    position: relative;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.5);
+}
+select:focus{
+    box-shadow: 0px 0px 3px #155e63, 0px 0px 3px #155e63, 0px 0px 3px #155e63,
+                0px 0px 3px #155e63, 0px 0px 3px #155e63, 0px 0px 3px #155e63;
+}
+div.custom-selector option{
+    padding: 10px;
+}
+div.custom-selector::after{
+    content: "";
+    display: inline-block;
+    border: 5px solid transparent;
+    border-top-color: rgba(51, 51, 51, 0.632);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+button.create-review{
+    border: none;
+    /* background: radial-gradient(#ddd, #fff); */
+    background-color: #155e63;
+    padding: 10px;
+    box-shadow:0px 0px 2px rgba(0,0,0,.5);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+div.poster{
+    position: relative;
+    overflow: hidden;
+}
+
+div.poster div.actions{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+div.poster:hover div.actions{
+    top: 0;
+}
+div.actions div.action-buttons a{
+    display: inline-block;
+    text-decoration: none;
+    background: #155e63;
+    padding: .5em 1em;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+}
+div.actions div.action-buttons a:hover{
+    background-color: #155e63da;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/movie.css">
+    <title><%- title %></title>
+</head>
+<body>
+    <div class="all-movies">
+        <a href="/movies/new" class="createmovie">Create Movie</a>
+        <div class="contents">
+            <h1>Movies</h1>
+            <% if(movies != 'undefined') { %> 
+                <div class="movies">
+                <% movies.forEach(movie => { %> 
+                <div class="movie">
+                    <div class="poster">
+                        <div class="actions">
+                            <div class="action-buttons">
+                                <a href="/movies/<%= movie.title %>">See More</a>
+                                <a href="/movies/<%= movie._id %>">Delete</a>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="https://media.istockphoto.com/photos/friends-in-the-cinema-picture-id1180701083?b=1&k=20&m=1180701083&s=170667a&w=0&h=i4RjlXSocbLiBpruz5KQY4wUlHZ9WX8bAVIMGf1qclw=" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <h1><%= movie.title %></h1>
+                        <p><strong>Release Year:</strong> <em><%= movie.releaseYear%></em></p>
+                        <p>
+                        <strong>Stars: </strong> <em><%= movie.cast.join(", ") %>.</em>
+                        </p>
+                        <p class="mpaa-rating">
+                            <strong>MPAA Rating: </strong><em><%= movie.mpaaRating %></em>
+                        </p>
+                        <p>
+                            <strong>Now Showing?: </strong> 
+                            <% if(movie.nowShowing) {%> 
+                                <em>Yes, the show is being played</em>
+                            <% } else { %> 
+                                <em>No, the show is not being played</em>
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <script>
+        document.querySelector('div.movie:nth-child(1)').classList.add('branding-movie')
+    </script>
+    <script src="../js/reviews.js"></script>
+</body>
+</html>

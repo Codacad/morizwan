@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="images/developer.svg" type="image/icon type">
+    <title>Mohd Rizwan</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs')%>
+    <div class="main-section" id="main-section">
+        <div class="main-section-contents">
+            <h1><span class="hello">Hello</span>, greetings from <span class="rizwan">Mohd Rizwan</span></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam aperiam mollitia laudantium enim quos harum, numquam veniam assumenda, vel distinctio odit natus ad ex debitis repellat sapiente. Nobis, hic! Voluptatibus consectetur beatae et optio nemo laudantium cupiditate eligendi blanditiis dolores consequatur! Sapiente reprehenderit ad, fuga rerum voluptates ipsam sequi totam?</p>
+            <a href="#" class="hire-me button">Hire Me</a>
+            <%- include('partials/important-links.ejs')%>
+        </div>
+    </div>
+    <div class="about-section">
+        <%- include('about-me.ejs')%>
+    </div>
+    <!-- Message -->
+    <%- include('partials/chat.ejs')%>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="images/resume.svg" type="image/icon type">
+</head>
+<body>
+    <%- include('partials/navbar.ejs')%>
+    <div class="resume" id="resume">
+        <div class="resume-contents">
+            <div class="resume-header">
+                <h1>Mohd Rizwan</h1>
+                <span>Fullstack Developer</span>
+            </div>
+            <div class="resume-body">
+                <!-- Side Left -->
+                <div class="side-left">
+                    <div class="contact">
+                        <ul>
+                            <li>
+                                <img src="images/phone.svg" alt="Phone">
+                                <span>+918979074004</span>
+                            </li>
+                            <li>
+                                <a href="mailto:iam@morizwan.in">
+                                    <img src="/images/mail.svg" alt="Email">
+                                    <span>iam@morizwan</span>
+                                </a>
+                            </li>
+                            <li id="address">
+                                <img src="images/location.svg" alt="Address">
+                                <div class="address">
+                                    <span>244601 Faridngar Thakurdwara</span>
+                                    <span>Moradabad Uttar Pradesh</span>
+                                    <span>India</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/images/linkedin-resume.svg" alt="Linkedin">
+                                <a href="">Linkedin</a>
+                            </li>
+                            <li>
+                                <img src="/images/github-resume.svg" alt="Github">
+                                <a href="">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills">
+                        <div class="frontend">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="html skill">
+                                        <span class="text">HTML</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">90%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="css skill">
+                                        <span class="text">CSS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">90%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="javascript skill">
+                                        <span class="text">JavaScript</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">80%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="reactjs skill">
+                                        <span class="text">RaactJS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">70%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="tootstrap skill">
+                                        <span class="text">Bootstrap</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">85%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="materializecss skill">
+                                        <span class="text">Materialize-CSS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">75%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="sass skill">
+                                        <span class="text">SASS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">70%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="backend">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="nodejs skill">
+                                        <span class="text">NodeJS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">75%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="expressjs skill">
+                                        <span class="text">ExpressJS</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">75%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="mongodb skill">
+                                        <span class="text">MongoDB</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">70%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="mongoose skill">
+                                        <span class="text">Mongoose</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">65%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="ssr skill">
+                                        <span class="text">SSR</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">80%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="other">
+                            <h4>Other</h4>
+                            <ul>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="git skill">
+                                        <span class="text">Git</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">70%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="github skill">
+                                        <span class="text">Github</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">80%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="webpack skill">
+                                        <span class="text">Webpack</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">50%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/done.svg" alt="Done">
+                                    <div class="testing skill">
+                                        <span class="text">Testing</span>
+                                        <div>
+                                            <span class="bar">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="percent">70%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Right -->
+                <div class="side-right">
+                    <!-- Summary -->
+                  <div class="summary">
+                      <div class="header">
+                          <img src="images/summary.svg" alt="Professional Summary">
+                          <h1>Professional Summary</h1>
+                      </div>
+                      <div class="body">
+                            <p>
+                                Motivated designer and developer adept at contrubuting to highly collavorative work environment and fnding solutions. Proven experience creating customer focused websites using HTML, CSS NodeJS and ReactJS. Strong collaboration skills and proven history of application development.  Good knowledge of the best practice of web design, user experience, and speed.
+                            </p>
+                      </div>
+                  </div>
+
+                  <!-- Projects -->
+                  <div class="projects">
+                    <div class="header">
+                        <img src="images/projects.svg" alt="Projects">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="body">
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span class="built-with">
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <img src="images/verified.svg" alt="verified">
+                            <div class="project-name">
+                                <a href="#"><h3>Project One</h3></a>
+                                <div class="details">
+                                    <div class="used-technologies">
+                                        <strong>Built with: </strong>
+                                        <span>
+                                            <span>#HTML, #CSS, #JavaScript, #ReactJS, #NodeJS, #MonogDB, and etc.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

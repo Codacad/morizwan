@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reviews.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="movie-reviews">
+        <% if(movie != 'undefined'){ %> 
+            <div class="movie">
+                <div class="movie-details">
+                    <div class="poster">
+                        <div class="actions">
+                            <div class="action-buttons">
+                                <a href="/movies">Back</a>
+                                <a href="/movies/<%= movie._id %>">Delete</a>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="https://media.istockphoto.com/photos/friends-in-the-cinema-picture-id1180701083?b=1&k=20&m=1180701083&s=170667a&w=0&h=i4RjlXSocbLiBpruz5KQY4wUlHZ9WX8bAVIMGf1qclw=" alt="">
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="contents">
+                            <h1><%= movie.title %></h1>
+                            <p><strong>Release Year:</strong> <em><%= movie.releaseYear%></em></p>
+                            <p>
+                            <strong>Stars: </strong> <em><%= movie.cast.join(", ") %>.</em>
+                            </p>
+                            <p class="mpaa-rating">
+                                <strong>MPAA Rating: </strong><em><%= movie.mpaaRating %></em>
+                            </p>
+                            <p>
+                                <strong>Now Showing?: </strong> 
+                                <% if(movie.nowShowing) {%> 
+                                    <em>Yes, the show is being played</em>
+                                <% } else { %> 
+                                    <em>No, the show is not being played</em>
+                                <% } %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-section">
+                    <div class="blank-side">
+
+                    </div>
+                    <div class="contents-side">
+                        <!-- <hr style="margin-right: 30px; margin-bottom: 20px; background-color: rgba(221, 221, 221, 0.651); height: 1px;"> -->
+                        <h1>Reviews</h1>
+                        <div class="reviews">
+                            <!-- Reviews -->
+                            <% if(movie.reviews.length == 0) { %>
+                                <h3>Movie doesn't have the reviews</h3>
+                            <% } else { %>
+                                <% movie.reviews.forEach(review => { %> 
+                                    <div class="review">
+                                        <div class="content">
+                                            <p><%= review.content %></p>
+                                        </div>
+                                        <div class="review-rating">
+                                            <p>
+                                                <span class="stars">
+                                                    <img class="star" src="../images/rating-star.svg" alt="">
+                                                    <img class="star" src="../images/rating-star.svg" alt="">
+                                                    <img class="star" src="../images/rating-star.svg" alt="">
+                                                    <img class="star" src="../images/rating-star.svg" alt="">
+                                                    <img class="star" src="../images/rating-star.svg" alt="">
+                                                </span>
+                                                <span class="rating-number"><%= review.rating %></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                             <% } %>
+                        </div>
+                        <div class="review-form">
+                            <!-- Create Reviews -->
+                            <form action="/movies/<%= movie.title %>" method="POST">
+                                <textarea name="content" id="content" cols="30" rows="10" required></textarea>
+                                <div class="custom-selector">
+                                    <select name="rating" id="rating">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <button class="create-review">Create Review</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <script src="../js/reviews.js"></script>
+</body>
+</html>
